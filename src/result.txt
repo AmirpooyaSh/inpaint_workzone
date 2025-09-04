@@ -1,68 +1,80 @@
+###
+### Without the Framework Implimantation
+###
+
 ✅ Model returned the following data:
 {
   "observations": [
     {
-      "worker_name": "Worker A",
-      "safety_issue": "Standing on or very near the edge of a temporary barrier within the swing radius of an active excavator arm, exposing the worker to struck-by and crush hazards."
+      "worker_name": "Worker standing near excavator arm",
+      "safety_issue": "Standing within the excavator\u2019s swing radius and risk zone, exposed to potential struck-by or crushing hazards."
     },
     {
-      "worker_name": "Worker B",
-      "safety_issue": "Positioned inside the work zone close to the excavator bucket without any positive physical separation, risking struck-by injury."
-    },
-    {
-      "worker_name": "Worker C",
-      "safety_issue": "Standing in close proximity to moving equipment without apparent eye or hearing protection, and without a clear, designated safe zone."
+      "worker_name": "Worker standing on curb/sidewalk",
+      "safety_issue": "Standing in an area without a clear physical barrier from equipment and traffic; not maintaining a safe distance from moving machinery."
     }
   ]
 }
 
 --- Final Extracted Information (as a list) ---
 ['N/A', 'N/A', 'N/A']
-apshirazi@apshirazi-desktop:~/inpaint_workzone/src$ python3 Command_Sender.py 
+
+
+###
+### Only the Worker on the Curbside
+###
+
 ✅ Model returned the following data:
 {
   "observations": [
     {
-      "worker_name": "worker_1",
-      "safety_issue": "Standing too close to an operating excavator without a substantial physical barrier, creating a struck-by / pinch-point hazard."
-    },
-    {
-      "worker_name": "worker_1",
-      "safety_issue": "No visible eye or face protection against flying debris from the excavation."
-    },
-    {
-      "worker_name": "worker_1",
-      "safety_issue": "No visible hearing protection while working near loud heavy equipment."
+      "worker_name": "Worker standing near excavator",
+      "safety_issue": "Standing within operating/swing radius of excavator without a rigid barrier; potential for being struck by machinery or debris"
     }
   ]
 }
 
 --- Final Extracted Information (as a list) ---
 ['N/A', 'N/A', 'N/A']
-apshirazi@apshirazi-desktop:~/inpaint_workzone/src$ python3 Command_Sender.py 
+
+###
+### Only the Worker On the Excavator's Right Side
+###
+
 ✅ Model returned the following data:
 {
   "observations": [
     {
-      "worker_name": "worker_1",
-      "safety_issue": "Standing within the operating/swing radius of the excavator, exposing themselves to struck-by or pinch point hazards."
+      "worker_name": "Worker standing near barricade",
+      "safety_issue": "Standing within the swing radius of the excavator arm and bucket; risk of struck-by or caught-between injury. Must stay outside the equipment\u2019s exclusion zone."
+    },
+    {
+      "worker_name": "Worker standing near barricade",
+      "safety_issue": "No eye or face protection and no gloves while pavement is being broken; exposed to flying debris and sharp edges."
     }
   ]
 }
 
 --- Final Extracted Information (as a list) ---
 ['N/A', 'N/A', 'N/A']
-apshirazi@apshirazi-desktop:~/inpaint_workzone/src$ python3 Command_Sender.py 
+
+###
+### Only the Worker behind the Excavator's Arm
+###
+
 ✅ Model returned the following data:
 {
   "observations": [
     {
-      "worker_name": "Worker_1",
-      "safety_issue": "Standing within the swing radius of an operating excavator arm, exposing themselves to struck-by hazards."
+      "worker_name": "Non-machinery worker near excavator",
+      "safety_issue": "Standing within swing radius of the excavator bucket, creating a struck-by/caught-between hazard."
     },
     {
-      "worker_name": "Worker_1",
-      "safety_issue": "No discernible eye or face protection while near flying debris from the jack-hammer attachment."
+      "worker_name": "Non-machinery worker near excavator",
+      "safety_issue": "Positioned on broken, uneven pavement and rubble, increasing slip/trip hazards."
     }
   ]
 }
+
+--- Final Extracted Information (as a list) ---
+['N/A', 'N/A', 'N/A']

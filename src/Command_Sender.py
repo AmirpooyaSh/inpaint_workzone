@@ -12,23 +12,23 @@ FUNC_SAFETY_REPORT = {
     "type": "function",
     "function": {
         "name": "report_safety_observation",
-        "description": "Reports observations about workers' safety compliance and identifying information.",
+        "description": "",
         "parameters": {
             "type": "object",
             "properties": {
                 "observations": {
                     "type": "array",
-                    "description": "List of worker safety observations.",
+                    "description": "",
                     "items": {
                         "type": "object",
                         "properties": {
                             "worker_name": {
                                 "type": "string",
-                                "description": "A name assigned to the worker which should be identical to other workers within the scene and realizable by the image/response reader (if any)",
+                                "description": "",
                             },
                             "safety_issue": {
                                 "type": "string",
-                                "description": "A concise description of the safety issue observed.",
+                                "description": "",
                             },
                         },
                         "required": ["worker_name", "safety_issue"],
